@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Basic HTML Elements Example</title>
+  <style>
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial; padding: 2rem; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; }
+    img { display: block; max-width: 100%; height: auto; border-radius: 8px; }
+    .meta { color: #555; font-size: 0.95rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    th, td { border: 1px solid #ddd; padding: 0.75rem; text-align: left; }
+    th { background-color: #f4f4f4; }
+    form { margin-top: 2rem; padding: 1.5rem; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9; }
+    form label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+    form input, form select { width: 100%; padding: 0.5rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px; }
+    form button { padding: 0.75rem 1.25rem; background: #0077cc; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    form button:hover { background: #005fa3; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- H1: Main heading -->
+    <h1>Welcome to My Sample Page</h1>
+
+    <!-- H2: Subheading -->
+    <h2>About This Example</h2>
+
+    <!-- P: Paragraph -->
+    <p class="meta">This short paragraph demonstrates a simple block of text using the &lt;p&gt; element. Use paragraphs to break up content into readable chunks.</p>
+
+    <!-- Display the image -->
+    <figure>
+      <img src="https://via.placeholder.com/800x400.png?text=Sample+Image" alt="Sample placeholder image showing a scenic placeholder" width="800" height="400">
+      <figcaption>Figure 1: A sample placeholder image (provided via placeholder.com).</figcaption>
+    </figure>
+
+    <!-- Anchor tag -->
+    <p>Visit the example website: <a href="https://example.com" target="_blank" rel="noopener noreferrer">Go to example.com</a></p>
+
+    <!-- Table with 5 data rows -->
+    <h2>Sample Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Occupation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Alice</td><td>24</td><td>Pune</td><td>Engineer</td></tr>
+        <tr><td>2</td><td>Bob</td><td>28</td><td>Mumbai</td><td>Designer</td></tr>
+        <tr><td>3</td><td>Charlie</td><td>22</td><td>Delhi</td><td>Student</td></tr>
+        <tr><td>4</td><td>Diana</td><td>30</td><td>Bangalore</td><td>Doctor</td></tr>
+        <tr><td>5</td><td>Edward</td><td>26</td><td>Hyderabad</td><td>Developer</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Unordered list -->
+    <h2>Unordered List</h2>
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Grapes</li>
+    </ul>
+
+    <!-- Ordered list -->
+    <h2>Ordered List</h2>
+    <ol>
+      <li>Wake up early</li>
+      <li>Exercise</li>
+      <li>Have breakfast</li>
+      <li>Work/study</li>
+      <li>Sleep on time</li>
+    </ol>
+
+    <!-- User Registration Form -->
+    <h2>User Registration Form</h2>
+    <form action="#" method="post">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- Select --</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="city">City</label>
+      <input type="text" id="city" name="city">
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
