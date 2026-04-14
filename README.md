@@ -1,133 +1,158 @@
-**🏠 Real Estate Business Web Application**
+# 🏠 Real Estate Management System (Spring Boot)
 
-A full-stack Real Estate Web Application developed using Spring Boot, MVC Architecture, and MySQL.
-This application allows users to buy and sell properties online, while providing an Admin panel to manage the entire system.
+A full-stack **Real Estate Web Application** built using **Spring Boot (MVC)** that allows users to **buy, sell, and manage properties** with role-based functionalities including **Admin, Buyer, Seller, and Broker**.
 
-**🚀 Features**
+---
 
-**👤 User Module**
+## 🚀 Features
 
-User Registration & Login
-Session-based Authentication
-Secure Page Access Control
-Logout Functionality
+### 🔐 Authentication & Authorization
+- User Registration & Login
+- Session-based authentication
+- Admin login dashboard
 
-**🏡 Property Module**
+### 🏡 Property Management
+- Add new property with image upload
+- View all available properties
+- Edit & delete property listings
+- Buy/Sell property workflow
 
-Add Property with Image Upload
-View All Available Properties
-Edit & Delete Property
-Property Image Storage in Static Folder
+### 👥 User Roles
+- **Admin**
+  - Manage users, properties, contacts
+- **Buyer**
+  - Browse and purchase properties
+- **Seller**
+  - Add and manage properties
+- **Broker**
+  - Manage brokerage data
 
-**🛒 Buyer Module**
-Submit Buyer Details
-Admin Can View/Edit/Delete Buyer Records
+### 📩 Contact System
+- Users can send messages
+- Admin can view & manage contact requests
 
-**🏢 Seller Module**
+### 📂 File Upload
+- Upload property images using `MultipartFile`
+- Stored in local system
 
-Seller Registration
-Add Property After Seller Registration
-Admin Management of Sellers
+---
 
-**🤝 Broker Module**
+## 🛠️ Tech Stack
 
-Add Broker
-View Broker List
-Edit & Delete Broker Information
+- **Backend:** Java, Spring Boot, Spring MVC  
+- **Frontend:** HTML, CSS, JSP/Thymeleaf  
+- **Database:** MySQL  
+- **Server:** Embedded Tomcat  
+- **Build Tool:** Maven  
 
-**📩 Contact Module**
+---
 
-Users can send inquiries
-Admin can view and manage contact messages
+## 📁 Project Structure
 
-**🔐 Admin Module**
+src/main/java/com/example/demo/
 
-Separate Admin Login
-Manage:
-Users
-Properties
-Buyers
-Sellers
-Brokers
-Contact Messages
+├── Controller/
+│ └── HomeController.java
+│
+├── Service/
+│ ├── Reg_Service.java
+│ ├── Ap_Service.java
+│ ├── Con_Service.java
+│ ├── Buyer_Service.java
+│ ├── Seller_Service.java
+│ └── Broker_Service.java
+│
+├── Model/
+│ ├── Register.java
+│ ├── AddProperty.java
+│ ├── Contact.java
+│ ├── Buyer.java
+│ ├── Seller.java
+│ └── Broker.java
 
-**🏗️ Project Architecture**
 
-This project follows MVC Architecture:
-Client → Controller → Service → Repository → Database → View
-Controller Layer – Handles HTTP Requests
-Service Layer – Business Logic
-Repository Layer – Database Interaction (JPA)
-Entity Layer – Database Tables Mapping
+---
 
-**🛠️ Technologies Used**
+## ⚙️ Installation & Setup
 
-Java
-Spring Boot
-Spring MVC
-Spring Data JPA
-MySQL
-HTML
-CSS
-Bootstrap
-JSP / Thymeleaf
-Maven
-Apache Tomcat
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/your-username/real-estate-system.git
+cd real-estate-system
 
-**📂 Key Functionalities Implemented**
+### 2️⃣ Configure Database
 
-CRUD Operations for All Modules
-File Upload using MultipartFile
-Session Management using HttpSession
-Dependency Injection using @Autowired
-Redirect Handling
-Model & ModelMap Data Binding
+Update application.properties:
 
-**📸 File Upload Handling**
+spring.datasource.url=jdbc:mysql://localhost:3306/realestate
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+spring.jpa.hibernate.ddl-auto=update
 
-Images are uploaded using MultipartFile
-Files stored in static directory
-Filename saved in database
-Images dynamically displayed in property listing
+3️⃣ Run the Project
+mvn spring-boot:run
 
-**🔐 Authentication Mechanism**
+4️⃣ Access Application
+http://localhost:8080/
+🔑 Default Admin Credentials
+Email: admin@gmail.com
+Password: admin@123
 
-Email & Password validation from database
-Session-based login system
-Redirect to login if session is invalid
-Logout invalidates session
 
-**🧩 Future Enhancements**
+⚠️ Important Notes
 
-Implement Spring Security
-Password Encryption (BCrypt)
-Role-Based Authorization
-Pagination & Sorting
-Global Exception Handling
-Cloud Storage (AWS S3) for Images
-REST API Version
 
-**💻 How to Run the Project**
+File upload path is currently hardcoded:
 
-Clone the repository:
-git clone https://github.com/your-username/real-estate-business.git
-Open in Eclipse / IntelliJ
-Configure MySQL Database
-Update application.properties
-Run as Spring Boot Application
-Access in browser:
-http://localhost:8080
 
-**👩‍💻 Author**
+C:\Users\ASUS\eclipse-workspace\Real_Estate_Business3\src\main\resources\static\UserUpload
+👉 Recommended: Make it configurable using application.properties
 
-Priyanka Rode
-Sneha Dhawan
+🧠 Future Improvements
 
-**⭐ Project Objective**
 
-This project was developed to understand real-world business flow implementation including:
-Authentication & Session Handling
+
+REST API + Theamleaf Frontend
+
+
+Cloud Storage (AWS S3 for images)
+
+
+Role-Based Access Control (RBAC)
+
+
+Pagination & Search Filters
+
+
+
+
+💡 Learning Outcomes
+
+
+Spring Boot MVC Architecture
+
+
 CRUD Operations
+
+
 File Upload Handling
-Admin Panel Management
-MVC Architecture Implementation
+
+
+Session Management
+
+
+Multi-role system design
+
+
+
+🤝 Contributing
+Feel free to fork this repo and improve it!
+
+📬 Contact
+Priyanka Rode
+GitHub: https://github.com/Priyanka-Rode
+LinkedIn: https://linkedin.com/in/priyankarode
+
+⭐ Support
+If you like this project, give it a ⭐ on GitHub!
+---If you want 🔥 next step:I can turn this into **:contentReference[oaicite:0]{index=0}** or **:contentReference[oaicite:1]{index=1}**.
